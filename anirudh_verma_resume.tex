@@ -1,0 +1,273 @@
+%-------------------------
+% Resume in Latex
+% Author : Anirudh Verma
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+    \vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://linkedin.com/in/anirudh-verma-67111514b}{\Large Anirudh Verma}} & Email : \href{mailto:an649hd@gmail.com}{an649hd@gmail.com}\\
+  \href{www.linkedin.com/in/anirudh-verma-67111514b}{} & Mobile : \href{tel:+919810410558}{+919810410558} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {NIIT University}{Neemrana, Rajasthan}
+      {B.Tech in Computer Science; Specialisation Data Science; Minor in Finance;  CGPA: 9.75}{Aug. 2017 -- Jul. 2021}
+    \resumeSubheading
+      {Amity International School}{Noida, UP}
+      {CBSE Board, Class 12 (Senior Secondary) - PCM Percentage: 92.3\%}{}
+      {CBSE Board, Class 10 (Secondary) - CGPA: 10}
+      % {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Bigbasket}{Bangalore, KA}
+      {Software Engineer - 2}{Apr 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Prime Developer for the WMS Effort - Replenishment}
+        {
+          \begin{itemize} % Nested list
+            \item Developed critical modules for handling replenishment flows in BB2.0, resulting in the gradual elimination of external dependencies.
+            \item Estimated recurring cost savings of over $\mathbf{>1.5 crore/month}$ through the project's impact. 
+            \item Implemented a high-performance service using low-level aiohttp and aiosql (sqlalchemy), leveraging custom-built abstractions for improved resource utilization and code readability.
+            \item Utilized dataclasses and typing extensively to reduce technical debt and improve code maintainability.
+            \item Led the migration to Async Django for the UI, resulting in highly responsive UI components with $<1s$ response times, even with complex scenarios involving $>20$ API calls.
+            \item Designed and implemented asynchronous consumers capable of processing $12$ Kafka messages simultaneously, reducing the need for scaling up consumers.
+            \item Revamped the logging structure, improving indexing and search times for efficient debugging and issue resolution.
+            \item Developed a specialized classifier to address validation problems related to replenishment cases around midnight, effectively eliminating instances of double ordering.
+            \item Identified and built a new CSRF verification module, enabling the business to maintain a large number of open tabs while preserving the state of each tab.
+          \end{itemize}
+        }
+        \resumeItem{CS Modules}
+        {
+          \begin{itemize} % Nested list
+            \item Optimized response time and expanded the availability of interfaces for CS providers such as Tata and Kapture.
+            \item Achieved a significant impact, resulting in cost savings of over $\mathbf{>50 Lakh/month}$
+          \end{itemize}
+        }
+        \resumeItem{Enhancing the base bigbasket asyncio package}
+        {
+          \begin{itemize} % Nested list
+            \item Worked on enhancing the foundational bigbasket asyncio package utilized by Python services.
+            \item Implemented improvements to increase performance and efficiency, benefiting the entire system architecture.
+          \end{itemize}
+        }
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+   \resumeSubSubheading
+    {Software Engineer I}{Jul 2021 - Mar 2022}
+    \resumeItemListStart
+      \resumeItem{Multi-Tenant (First Service in Company) for SaaS spinoff}
+      {
+        \begin{itemize} % Nested list
+          \item Successfully handled the shift of the pilot service (config service) to multi-tenancy, ensuring data isolation without additional infrastructure.
+          \item Architected a new implementation addressing observed shortcomings, including an optimized in-memory caching system.
+          \item Achieved <10ms response times and ensured coherency across tenants using a revamped zookeeper based synchronisation layer.
+          \item Played a critical role in revenue generation from TMS, WMS projects, and SaaS offerings to Croma.
+          \item Contributed to building the base multi-tenancy package for Java-based services at Bigbasket.    
+        \end{itemize}
+      }
+      \resumeItem{Integration with Tata Neu}
+      {
+        \begin{itemize} % Nested list
+          \item Developed interfaces for CS integration between Bigbasket and Tata.
+          \item Managed daily external client-side interactions as a fresher.
+          \item Implemented multi-threaded solutions to enhance throughput and reduce response time for improved CS experience. (from >20s to <0.5s)
+        \end{itemize}
+      }
+      \resumeItem{Added Configuration Hierarchy for EC Group}
+      {
+        \begin{itemize} % Nested list
+          \item Enabled instant and intuitive configuration of services  Pan-India, allowing business-level changes instead of geographical changes.
+          \item Example: configuring services for results such as shutting down bb-now or disabling Tata-Neu.
+        \end{itemize}
+      }
+      \resumeItem{Prime developer behind BBNow (Instant-Grocery)}
+      {
+        \begin{itemize} % Nested list
+          \item Designed a new route assignment flow for LMD and implemented a dynamic CEE assignment flow with CEEPool integration.
+          \item Solved issues like dirty read and duplicate assignment through optimized assignment procedures.
+          \item Developed scripts for data setup and automated testing for BBNow.
+          \item Achieved impressive results: 150 successful store launches, 18.7 lakh new orders and 71 Cr. in sales within a 5-month period.
+        \end{itemize}
+      }
+      \resumeItem{Helm Replenishment Service}
+      {
+        \begin{itemize} % Nested list
+          \item Converted the replenishment service to Helm, enabling template-based deployments.
+        \end{itemize}
+      }
+    \resumeItemListEnd
+  %  \resumeSubHeadingListEnd
+
+   \resumeSubSubheading
+   {Software Engineer Intern}{Jan 2021 - Jun 2021}
+   \resumeItemListStart
+      \resumeItem{Added SMS Provider}
+      {
+        \begin{itemize} % Nested list
+          \item Revamped bigbasket's SMS system for DLT integration with a new SMS provider.
+          \item Implemented a load balancer to enable a switch from a deterministic approach to a probabilistic approach, improving fault tolerance without manual intervention.         
+        \end{itemize}
+      }
+      \resumeItem{Others}
+      {CEE Warning System}
+    \resumeItemListEnd
+  % \resumeSubHeadingListEnd
+% -------------------------------------------
+    \resumeSubheading
+      {Barco}{Noida, UP}
+      {Intern}{Jun 2019 - Jul 2019}
+      \resumeItemListStart
+        \resumeItem{Real Time Dashboard}
+        {Developed a Real Time Dashboard that aggregated and visualized all performance metrics from the product line.}
+        \resumeItem{Alert System}
+        {Built an email alert system that would send a custom scripted email to the appointed manager in case of a system failure.}
+        \resumeItem{Reporting System}
+        {Created a reporting service that would send reports containing raw and aggreegated data to authorized individuals at set intervals.}
+        \resumeItem{Technologies}
+        {SQL Server, Node.js, Node-RED, RMM Server, and SSRS}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeItem{Student Counselling Chatbot}
+      {
+        \begin{itemize} % Nested list
+          \item Designed and developed a counselling chatbot solution for a career counselling portal/company.
+          \item Successfully deployed the chatbot live in production, providing valuable support to users.
+          \item Received recognition as the competition winner among the final 10 participating teams, securing a cash prize of INR 50,000.
+          \item Led the project from start to finish, handling functional and technical requirements, creating a comprehensive system design document, and undertaking full-stack development.
+          \item Ensured a seamless user experience by focusing on user-friendly features, custom UI design, and support for various devices.
+          \item Implemented input flexibility to accommodate different user preferences and enhance the chatbot's usability.
+        \end{itemize}
+      }
+    \resumeItem{Broke Student Brokers}
+      {
+        \begin{itemize} % Nested list
+          \item Built an cross platform android/ios app using Flutter to see portfolio and add funds.
+          \item Serverless functions in python created on Google Cloud that would run everyday at 11AM to forecast and perform trades using Alpaca (Simulated), Yahoo Finance and Firebase.
+        \end{itemize}
+      }
+    
+    \resumeItem{Smart India Hackathon - 2020}
+      {\textbf{'Grand Finalist' (Top $\mathbf{10\%}$)} - ISRO (Indian Space Research Organization).}
+
+  \resumeSubHeadingListEnd
+
+%
+% --------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+    \textbf{Technologies}{: AWS, K8s, Helm, Kafka, GCE, Aerospike, Zookeeper}
+    \hfill
+    \textbf{Languages}{: Python, Javascript, SQL, Java}
+
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
